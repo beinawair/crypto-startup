@@ -3,7 +3,7 @@ import Image from 'next/image';
 import globalMeta from '../components/landingpage/SEO/globalMeta';
 import NavbarSection from '../components/landingpage/NavbarSection';
 import FooterSection from '../components/landingpage/FooterSection';
-import GradientMesh from '../components/landingpage/Animation/gradientMeshAnimation';
+import GradientMesh from '../components/landingpage/Animation/GradientMeshAnimation';
 import GradientMeshPassive from '../components/landingpage/Animation/GradientMeshAnimationPassive';
 
 import { useEffect, useState } from "react";
