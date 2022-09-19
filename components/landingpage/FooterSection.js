@@ -81,7 +81,7 @@ const FooterSection = () => {
                 </div>
             </div>
             <div className="line-devider"></div>
-            <div className="footer-menu">
+            <div className="footer-menu copyright-group">
                 <p className="copyright">@ 2022 Wiki. All rights reserved - by beinawair</p>
                 <div className="privacy-policy">
                     <ul className="footer-menu">

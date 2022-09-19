@@ -14,6 +14,7 @@ const SectionTestimonials = ({ children}) => {
                 className={'carousel'}
                 elementType={'div'}
                 options={flickOptions}
+                static
             >
                 {children}
             </Flickity>
