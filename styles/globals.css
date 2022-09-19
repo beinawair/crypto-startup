@@ -89,15 +89,16 @@ a {
 
 .mobile-menu.active .menu-list-mobile {
   display: flex;
-  top: 80px;
+  top: 0;
+  padding-top: 80px;
   opacity: 1;
-  z-index: 10;
+  z-index: -1;
 }
 
 .menu-list-mobile {
   position: absolute;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 100vh;
   top: -100vh;
   left: 0;
   opacity: 0;
