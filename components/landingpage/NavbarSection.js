@@ -1,12 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const HeaderSection = () => {
+    const [toggle, setToggle] = useState(false)
+
     return (
         <>
             <nav className="container mx-auto navigation">
                 {/* mobile menu */}
-                <div className="mobile-menu">
+                <div className={toggle ? "mobile-menu" : "mobile-menu active"}>
                     <div className="logo-image">
                         <Link href="/">
                             <a>
@@ -18,42 +21,41 @@ const HeaderSection = () => {
                             </a>
                         </Link>
                     </div>
-                    <div className="menu-icon-mobile">
+                    <div className="menu-icon-mobile" onClick={() => setToggle(!toggle)}>
                         <div></div>
                         <div></div>
                     </div>
                     <div className="menu-list-mobile">
-                        <ul className="list">
-                            <li className="menu">
+                        <ul className="list mobile-menus">
+                            <li className="menu link-holder">
                                 <Link href="#">
-                                    <a>Exchange</a>
+                                    <a className="text-link">Exchange</a>
                                 </Link>
                             </li>
-                            <li className="menu">
+                            <li className="menu link-holder">
                                 <Link href="#">
-                                    <a>Buy Crypto</a>
+                                    <a className="text-link">Buy Crypto</a>
                                 </Link>
                             </li>
-                            <li className="menu">
+                            <li className="menu link-holder">
                                 <Link href="#">
-                                    <a>Market</a>
+                                    <a className="text-link">Market</a>
                                 </Link>
                             </li>
                         </ul>
-                        <div className="devider">
-                            <ul className="cta-button">
-                                <li className="menu">
-                                    <Link href="#">
-                                        <a>Login</a>
-                                    </Link>
-                                </li>
-                                <li className="menu">
-                                    <Link href="#">
-                                        <a>Get Started</a>
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                        <div className="devider"></div>
+                        <ul className="cta-button mobile-menus text-center">
+                            <li className="menu mobile-login link-holder">
+                                <Link href="#">
+                                    <a className="text-link">Login</a>
+                                </Link>
+                            </li>
+                            <li className="menu btn-primary cursor-pointer link-holder">
+                                <Link href="#">
+                                    <a className="mobile-register text-link">Get Started</a>
+                                </Link>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 

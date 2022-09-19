@@ -63,18 +63,60 @@ a {
 }
 
 .menu-icon-mobile > div {
+  display: block;
+  position: relative;
+  top: 0;
   width: 35px;
   height: 2px;
   border-radius: 1px;
   background-color: white;
+  transition: all .3s ease-in-out ;
 }
 
 .menu-icon-mobile > div:first-child{
   margin-bottom: 10px;
 }
 
+.mobile-menu.active .menu-icon-mobile > div:first-child {
+  transform: rotate(45deg);
+  top: 6px;
+}
+
+.mobile-menu.active .menu-icon-mobile > div:last-child {
+  transform: rotate(-45deg);
+  top: -6px;
+}
+
+.mobile-menu.active .menu-list-mobile {
+  display: flex;
+  top: 80px;
+  opacity: 1;
+  z-index: 10;
+}
+
 .menu-list-mobile {
-  display: none;
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 80px);
+  top: -100vh;
+  left: 0;
+  opacity: 0;
+  flex-direction: column;
+  background-color: var(--color-bg-02);
+  transition: all .3s ease-in-out;
+  z-index: -10;
+}
+
+.mobile-menus {
+  padding: 1em 1.3em;
+}
+
+.text-link {
+  font-size: 1.2em;
+}
+
+.link-holder {
+  padding: 1em 0;
 }
 
 .mobile {
@@ -553,7 +595,7 @@ footer {
 }
 
 @media screen and (min-width: 700px) {
-  main {
+  main, header {
     padding: 0 4rem;
   }
 
@@ -638,7 +680,7 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  main {
+  main, header {
     padding: 0 7.5rem;
   }
 
