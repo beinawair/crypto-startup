@@ -46,6 +46,10 @@ a {
   }
 }
 
+.desktop-view-bg {
+  display: none;
+}
+
 .mobile-menu {
   display: flex;
   justify-content: space-between;
@@ -598,6 +602,14 @@ footer {
 @media screen and (min-width: 700px) {
   main, header {
     padding: 0 4rem;
+  }
+
+  .desktop-view-bg {
+    display: block;
+  }
+
+  .mobile-view-bg {
+    display: none;
   }
 
   .title-head {

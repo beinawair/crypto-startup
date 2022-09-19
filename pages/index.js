@@ -83,7 +83,12 @@ export default function Home() {
               <button className="btn-primary">Get Started</button>
             </div>
           </div>
-          <GradientMesh />
+          <div className="desktop-view-bg">
+            <GradientMesh />
+          </div>
+          <div className="mobile-view-bg">
+            <GradientMeshPassive />
+          </div>
         </div>
       </section>
 
