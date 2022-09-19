@@ -5,12 +5,24 @@ const HeaderSection = () => {
     return (
         <>
             <nav className="container mx-auto navigation">
-                <div className="mobile-menu hidden">
-                    <div className="bar-icon">
-                        <div className="line-up"></div>
-                        <div className="line-down"></div>
+                {/* mobile menu */}
+                <div className="mobile-menu">
+                    <div className="logo-image">
+                        <Link href="/">
+                            <a>
+                                <Image src="/image/Logo.svg"
+                                    alt="Logo"
+                                    width={70}
+                                    height={35}
+                                />
+                            </a>
+                        </Link>
                     </div>
-                    <div className="menu-lists">
+                    <div className="menu-icon-mobile">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div className="menu-list-mobile">
                         <ul className="list">
                             <li className="menu">
                                 <Link href="#">
@@ -44,6 +56,8 @@ const HeaderSection = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* dekstop menu */}
                 <div className="desktop-menu w-100 flex justify-between items-center">
                     <div className="logo-image">
                         <Link href="/">

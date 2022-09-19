@@ -23,6 +23,8 @@ body {
   line-height: 2;
   @apply tracking-wider;
   overflow-x: hidden;
+  /* color: white;
+  background: #33313E; */
 }
 
 a {
@@ -42,6 +44,37 @@ a {
   h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
   }
+}
+
+.mobile-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-icon-mobile {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menu-icon-mobile > div {
+  width: 35px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: white;
+}
+
+.menu-icon-mobile > div:first-child{
+  margin-bottom: 10px;
+}
+
+.menu-list-mobile {
+  display: none;
 }
 
 .mobile {
@@ -99,6 +132,16 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: #33313E;
+  }
+}
+
+@media (prefers-color-scheme: light) {
   html {
     color-scheme: dark;
   }
@@ -394,8 +437,12 @@ footer {
 
 @media screen and (min-width: 320px) {
 
-  main {
-    padding: 0 .5em;
+  main, header {
+    padding: 0 1em;
+  }
+
+  .desktop-menu {
+    display: none;
   }
 
   .title-head {
@@ -577,6 +624,16 @@ footer {
 
   .title-sub {
     text-align: left !important;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .desktop-menu {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: none;
   }
 }
 
