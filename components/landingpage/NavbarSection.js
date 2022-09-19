@@ -9,7 +9,7 @@ const HeaderSection = () => {
         <>
             <nav className="container mx-auto navigation">
                 {/* mobile menu */}
-                <div className={toggle ? "mobile-menu" : "mobile-menu active"}>
+                <div className={toggle ? "mobile-menu active" : "mobile-menu"}>
                     <div className="logo-image">
                         <Link href="/">
                             <a>
