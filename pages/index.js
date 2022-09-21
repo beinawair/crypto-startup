@@ -129,7 +129,7 @@ export default function Home() {
                   <br />
                   Crptocurrentcy Platform
                 </h2>
-                <p className="text-paragraph mt-8 max-w-sm text-md">Here are few reasons why you should choose Wiki as your partner</p>
+                <p className="text-paragraph margin mt-8 max-w-sm text-md">Here are few reasons why you should choose Wiki as your partner</p>
               </div>
               <div className="core-value mt-2">
                 <SectionCoreValue img="/image/illustration/secured_storage.svg"

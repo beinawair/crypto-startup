@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+import { signIn } from 'next-auth/react';
+
 const HeaderSection = () => {
     const [toggle, setToggle] = useState(false)
 
@@ -46,7 +48,7 @@ const HeaderSection = () => {
                         <div className="devider"></div>
                         <ul className="cta-button mobile-menus text-center">
                             <li className="menu mobile-login link-holder">
-                                <Link href="#">
+                                <Link href="/auth/signin" onClick={() => signIn()}>
                                     <a className="text-link">Login</a>
                                 </Link>
                             </li>
@@ -94,7 +96,7 @@ const HeaderSection = () => {
                     <div className="cta-buttons">
                         <ul className="cta-button flex gap-14 items-center">
                             <li className="menu">
-                                <Link href="#">
+                                <Link href="/auth/signin" onClick={() => signIn()}>
                                     <a>Login</a>
                                 </Link>
                             </li>
