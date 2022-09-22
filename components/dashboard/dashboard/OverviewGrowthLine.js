@@ -19,19 +19,19 @@ const OverviewGrowthLine = () => {
   return (
     <div className='w-100 flex gap-20 justify-between mx-auto'>
         <SparkLineChart 
-            dataSet={''} 
-            bgColor={bgColor} 
-            dotColor={dotColor}
-            options={options}
-            labelX={['10AM', '12PM', '14PM', '16PM', '18PM', '20PM', '22PM',]}
+            dataSet={data} 
+            // bgColor={bgColor} 
+            // dotColor={dotColor}
+            // options={options}
+            // labelX={['10AM', '12PM', '14PM', '16PM', '18PM', '20PM', '22PM',]}
         />
 
         <BarChart 
-            dataSet={''} 
-            bgColor={bgColor} 
-            dotColor={dotColor}
-            options={options}
-            labelX={['10AM', '12PM', '14PM', '16PM', '18PM', '20PM', '22PM',]}
+            dataSet={data} 
+            // bgColor={bgColor} 
+            // dotColor={dotColor}
+            // options={options}
+            // labelX={['10AM', '12PM', '14PM', '16PM', '18PM', '20PM', '22PM',]}
         />
     </div>
   )
