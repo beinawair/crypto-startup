@@ -23,8 +23,6 @@ const OverviewGrowthLine = () => {
             bgColor={bgColor} 
             dotColor={dotColor}
             options={options}
-            height={200}
-            width={300}
             labelX={['10AM', '12PM', '14PM', '16PM', '18PM', '20PM', '22PM',]}
         />
 
@@ -33,8 +31,6 @@ const OverviewGrowthLine = () => {
             bgColor={bgColor} 
             dotColor={dotColor}
             options={options}
-            height={200}
-            width={300}
             labelX={['10AM', '12PM', '14PM', '16PM', '18PM', '20PM', '22PM',]}
         />
     </div>
