@@ -80,7 +80,7 @@ export default function Dashboard() {
                                     <div>
                                         <h3 className='text-xl font-light mb-5'>Coin Owned</h3>
                                         <div className="flex gap-4 flex-wrap">
-                                            {/* <CoinCard data={coinOwned} /> */}
+                                            <CoinCard data={coinOwned} />
                                         </div>
                                     </div>
                                 </div>

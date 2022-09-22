@@ -46,7 +46,7 @@ const CoinCard = ({ data }) => {
                         <div className={'w-[70px] rounded-full text-xs flex items-center justify-center font-bold p-2 mb-2 ' + item.bgText + ' ' + item.color}>{item.value}</div>
                         <p className="text-xl font-bold text-gray-700">{item.currentCoin}</p>
                     </div>
-                    <SparkLineChart 
+                    {/* <SparkLineChart 
                         dataSet={''} 
                         bgColor={item.lineChartColor} 
                         dotColor={item.dotColor}
@@ -54,7 +54,7 @@ const CoinCard = ({ data }) => {
                         height='72px'
                         width='75px'
                         labelX={[1,2,3,4,5,6]}
-                    />
+                    /> */}
                 </div>
             </div>
         ))}
