@@ -7,11 +7,11 @@ const SignOut = () => {
   )
 }
 
-export default SignOut
+export default SignOut;
 
-export const getServerSideProps = async (context) {
-    console.log(context.req.cookies)
+export const getServerSideProps = async (context) => {
+    console.log(context.req.cookies);
     return {
         props: {}
     }
-}
+};
