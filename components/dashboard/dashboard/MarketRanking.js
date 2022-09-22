@@ -1,7 +1,6 @@
 import React from 'react'
 
 const MarketRanking = ({ data }) => {
-    console.log(data)
   return (
     <div className='w-full'>
         <table className="w-56">

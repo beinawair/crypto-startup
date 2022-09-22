@@ -7,6 +7,7 @@ import { CgProfile } from 'react-icons/cg';
 import { BsTelephoneFill } from 'react-icons/bs';
 import { FiSettings } from 'react-icons/fi';
 import { AiOutlineLogout } from 'react-icons/ai';
+import { signOut } from 'next-auth/react';
 
 export const links = [
     {
@@ -52,11 +53,11 @@ export const links = [
         name: 'Settings',
         icon: <FiSettings />
     },
-    {
-        title: 'Logout',
-        name: 'Logout',
-        icon: <AiOutlineLogout />
-    },
+    // {
+    //     title: 'Logout',
+    //     name: 'Logout',
+    //     icon: <AiOutlineLogout />
+    // },
   ];
 
   export const SparklineAreaData = [

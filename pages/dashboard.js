@@ -12,7 +12,7 @@ import SEOHead from '../components/landingpage/SEO/SEOHead';
 import { coinOwned, SparklineAreaData, summaryFilter } from '../config/const';
 import { useStateContext } from '../contexts/ContextProvider';
 import { useSession } from 'next-auth/react';
-import { Router } from 'next/router';
+import Router from 'next/router';
 
 const siteURL = "http://localhost:3000/dashboard"
 
@@ -21,6 +21,7 @@ const EndPoint = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd
 export default function Dashboard() {
     const [coins, setCoins] = useState([]);
     const { activeMenu } = useStateContext();
+    const { status } = useSession();
 
     const structuredLd = JSON.stringify({
         "@context": siteURL,
@@ -42,6 +43,11 @@ export default function Dashboard() {
           console.log(EndPoint)
       }, []);
 
+    useEffect(() => {
+        if (status === "unauthenticated") Router.replace("/auth/signin");
+    });
+    
+    if (status === "authenticated")
     return (
         <div>
             <SEOHead 
@@ -59,8 +65,8 @@ export default function Dashboard() {
                                 <div className="flex items-center justify-between">
                                     <h3 className='text-xl font-light mb-8'>Summary</h3>
                                     <ul className="flex gap-4 items-center text-sm">
-                                        {summaryFilter?.map((data) => (
-                                            <li key={data.text}>{data.text}</li>
+                                        {summaryFilter?.map((data, i) => (
+                                            <li key={i}>{data.text}</li>
                                         ))}
                                     </ul>
                                 </div>
@@ -119,5 +125,7 @@ export default function Dashboard() {
                 </div>
             </Layout>
         </div>
-    )
+    );
+
+    return <div>loading</div>
 }

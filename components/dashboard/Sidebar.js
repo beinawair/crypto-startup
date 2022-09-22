@@ -6,6 +6,8 @@ import { MdOutlineCancel } from 'react-icons/md';
 import { SiShopware } from 'react-icons/si';
 import { links, linkSettings } from '../../config/const';
 import { useStateContext } from '../../contexts/ContextProvider';
+import { signOut } from 'next-auth/react';
+import { AiOutlineLogout } from 'react-icons/ai';
 
 const Sidebar = () => {
     const { activeMenu, setActiveMenu } = useStateContext();
@@ -16,6 +18,10 @@ const Sidebar = () => {
             setActiveMenu(false);
         }
     }
+
+    const handleSignOut = async (e) => {
+        await signOut({callbackUrl: '/' })
+      }
 
     const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2 hover:bg-[#9F34E1]';
     const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2';
@@ -76,6 +82,14 @@ const Sidebar = () => {
                                 </Link>
                             </div>
                         ))}
+                        <div>
+                            <a className={activeLink + ' cursor-pointer'} onClick={handleSignOut}>
+                                <AiOutlineLogout />
+                                <span className='capitalize'>
+                                    Sign Out
+                                </span>
+                            </a>
+                        </div>
                     </div>
                     {/* {links.map((item) => (
                     <div key={item.title}>
