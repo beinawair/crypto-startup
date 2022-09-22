@@ -71,7 +71,7 @@ export default function Dashboard() {
                                     </ul>
                                 </div>
                                 <div className="flex">
-                                    {/* <OverviewGrowthLine /> */}
+                                    <OverviewGrowthLine />
                                     <div className="flex"></div>
                                 </div>
                             </div>

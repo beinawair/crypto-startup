@@ -26,11 +26,10 @@ const SparkLineChart = ({ dataSet, bgColor, dotColor, options, height, width, la
         labels: labelX,
         datasets: [
             {
-            label: 'price',
-            data: dataSet,
-            fill: true,
-            backgroundColor: dotColor,
-            borderColor: bgColor,
+              data: dataSet,
+              // fill: true,
+              backgroundColor: dotColor,
+              borderColor: bgColor,
             },
         ]
     };
