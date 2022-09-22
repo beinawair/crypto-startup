@@ -40,8 +40,8 @@ const SparkLineChart = ({ dataSet, bgColor, dotColor, options, height, width, la
         <Line 
             data={data} 
             options={options}
-            // height={height}
-            // width={width}
+            height={height || ''}
+            width={width || ''}
         />
     </div>
   )
