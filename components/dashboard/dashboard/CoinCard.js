@@ -47,7 +47,7 @@ const CoinCard = ({ data }) => {
                         <p className="text-xl font-bold text-gray-700">{item.currentCoin}</p>
                     </div>
                     <SparkLineChart 
-                        dataSet={item.data} 
+                        dataSet={''} 
                         bgColor={item.lineChartColor} 
                         dotColor={item.dotColor}
                         options={optionsCoinOwned}
