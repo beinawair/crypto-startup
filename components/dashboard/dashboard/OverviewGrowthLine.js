@@ -19,7 +19,7 @@ const OverviewGrowthLine = () => {
   return (
     <div className='w-100 flex gap-20 justify-between mx-auto'>
         <SparkLineChart 
-            dataSet={data} 
+            // dataSet={data} 
             // bgColor={bgColor} 
             // dotColor={dotColor}
             // options={options}
@@ -27,7 +27,7 @@ const OverviewGrowthLine = () => {
         />
 
         <BarChart 
-            dataSet={data} 
+            // dataSet={data} 
             // bgColor={bgColor} 
             // dotColor={dotColor}
             // options={options}
