@@ -58,7 +58,7 @@ export default function Dashboard() {
                 ogType="WebApp"
             />
             <Layout>
-                <div className="mt-6 flex mx-auto w-full">
+                <div className="mt-6 flex mx-auto w-auto">
                     <div className="flex w-full items-start gap-4 mx-auto">
                         <div className="flex w-100 h-screen max-w-70 flex-col flex-shrink">
                             <div className="rounded-xl bg-[#23212B] w-100 p-8 px-10">
