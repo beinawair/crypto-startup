@@ -1,3 +1,4 @@
+import { DataLabelSettings } from '@syncfusion/ej2/spreadsheet';
 import Image from 'next/image'
 import React from 'react'
 import SparkLineChart from '../chart/SparkLineChart'
@@ -31,6 +32,7 @@ const optionsCoinOwned = {
 
 
 const CoinCard = ({ data }) => {
+    const labels = ['1', '2', '3', '4', '5', '6',]
   return (
     <>
         {data?.map((item, i) => (
@@ -54,7 +56,7 @@ const CoinCard = ({ data }) => {
                         options={optionsCoinOwned}
                         height='72px'
                         width='75px'
-                        labelX={[1,2,3,4,5,6]}
+                        labelX={labels}
                     />
                 </div>
             </div>
